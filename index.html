@@ -7,20 +7,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="bg1.jfif">
     <title>Expression Parsing</title>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
     <header>
         <h1>Expression Convertor</h1>
     </header>
+
     <div id="main-div">
+
         <div id="contain-div">
             <input type="text" id="i1" placeholder="Enter an INFIX expression...." required /><br>
-            <button type="submit" id="btn" onclick=" convertor()">CONVERT TO POSTFIX</button><br>
+            <div id="btns">
+                <button type="submit" id="btn" onclick=" convertor()">CONVERT TO POSTFIX</button>
+                <button type="submit" onclick=window.location.reload()>Clear</button><br><br>
+            </div>
             <input type="text" id="i2" placeholder="You will get POSTFIX expression  here...." disabled /><br>
         </div>
+
+        <div id="contain-div1">
+            <div class="infodiv">
+                <h1>My Websites</h1>
+                <hr>
+                <ul>
+                    <li><a href="#">C-Programming</a></li>
+                    <li><a href="#">Learn C++</a></li>
+                    <li><a href="#">JavaProgramming</a></li>
+                    <li><a href="#">PythonStar</a></li>
+                    <li><a href="#">Web-Development</a></li>
+                </ul>
+            </div>
+
+            <div class="infodiv">
+                <h1>My Projects</h1>
+                <hr>
+                <ul>
+                    <li><a href="#">Resume Builder</a></li>
+                    <li><a href="#">Age Calculator</a></li>
+                    <li><a href="#">My Portfolio</a></li>
+                    <li><a href="#">Current Weather Report</a></li>
+                    <li><a href="#">My Quiz App</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+
     </div>
+    <footer>&copy;CoderAnny</footer>
     <script src="script.js"></script>
 </body>
 

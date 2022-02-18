@@ -52,6 +52,14 @@ function convertor() {
   push("#");
   infixval = document.getElementById("i1").value;
 
+  if (infixval == "" || infixval == " ") {
+    swal({
+      title: "WRONG!!",
+      text: "Input can not be Blank!",
+      icon: "error",
+    });
+  }
+
   for (var i = 0; i < infixval.length; i++) {
     var el = infixval[i];
 

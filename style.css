@@ -4,48 +4,54 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: #F8EFBA;
+}
+
 header {
-    width: 100vw;
-    height: 30vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(bg.jfif);
     background-position: center;
     background-size: cover;
 }
 
+
+
 header h1 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 1rem 0rem;
     color: #fff;
     text-align: center;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 4rem 0rem 3rem 0rem;
 }
 
-header h1::first-letter {
-    font-size: 3rem;
-}
 
 #main-div {
-    width: 100vw;
+    width: 100%;
+    display: flex;
 }
 
 #contain-div {
-    width: 60%;
-    margin: 2rem auto;
-    display: grid;
-    place-items: center;
+    flex-basis: 70%;
+    margin: 3rem 4rem;
+    padding: 2rem;
+    background-color: #3d3d3d;
+    border-radius: 2rem;
 }
 
 #contain-div input {
     width: 100%;
     margin: 2rem 0rem;
-    font-size: 1.5rem;
-    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.3rem;
     padding: 0.5rem 1rem;
+    border: none;
     outline: none;
-    border: .1rem solid #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    ;
 }
 
 #contain-div input::placeholder {
-    font-size: 1.2rem;
+    font-size: 1rem;
+    text-align: left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 #contain-div input:focus::placeholder {
@@ -54,40 +60,111 @@ header h1::first-letter {
 
 #contain-div #i1 {
     color: red;
-}
-
-#contain-div #i1:focus {
-    transform: scale(1.1);
-    box-shadow: .1rem .1rem 1rem .1rem rgba(0, 0, 0, 0.4);
+    border-radius: 2rem;
+    text-align: center;
 }
 
 #contain-div #i2 {
     color: blue;
-    background-color: transparent;
-    cursor: not-allowed;
-}
-
-#contain-div button {
-    padding: 1rem 2rem;
-    background-color: green;
-    color: #fff;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    cursor: pointer;
-}
-
-#contain-div button:hover {
     background-color: #fff;
-    color: green;
-    border-color: green;
+    cursor: not-allowed;
+    position: relative;
+    border-radius: 2rem;
+    text-align: center;
+}
+
+#btns {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 3rem 0rem;
+}
+
+#btns button {
+    font-size: 1rem;
+    background-color: blue;
+    color: #fff;
+    cursor: pointer;
+    padding: 0.7rem;
+    border: .12rem solid #fff;
+    outline: none;
+    width: 35%;
+}
+
+#btns button:nth-child(1) {
+    background-color: tomato;
+    color: #fff;
+}
+
+#contain-div1 {
+    flex-basis: 30%;
+}
+
+#contain-div1 h1 {
+    font-size: 1.5rem;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 1rem 0rem;
+}
+
+#contain-div1 ul{
+    width: 100%;
+    padding: 0rem 1.2rem;
+}
+
+#contain-div1 ul li {
+    list-style-type: "👉";
+    padding: 0.5rem 0rem;
+}
+
+#contain-div1 ul li a{
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color:blueviolet;
+}
+
+#contain-div1 ul li a:hover{
+    border-bottom: .2rem solid blueviolet;
+}
+
+footer{
+    background-color:#000;
+    font-size: 1rem;
+    color: #fff;
+    padding: 1rem 2rem;
+    text-align: right;
 }
 
 @media (max-width:600px) {
+    body {
+        overflow-x: hidden;
+    }
+    #main-div{
+        display: block;
+        padding: 0rem 0rem 0rem 1rem;
+    }
+
     #contain-div input::placeholder {
         font-size: 0.9rem;
     }
 
     #contain-div {
-        width: 75%;
-        margin-top: 3.3rem;
+        width: 85%;
+        margin: 3rem auto;
     }
+
+    #contain-div input {
+        margin: 2rem 0rem 0rem 0rem;
+    }
+
+    #btns {
+        align-items: center;
+        flex-direction: column;
+        margin: 1rem 0rem;
+    }
+
+    #btns button {
+        width: 80%;
+        margin: 2rem 0rem 0rem 0rem;
+    }
+
 }
